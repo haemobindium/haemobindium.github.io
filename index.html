@@ -24,7 +24,17 @@
 </head>
 
 <body>
-
+	<style>
+		.sticky {
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+			}
+		.header {
+			  padding: 10px 16px;
+			 
+			}
+	</style>
 	<!-- Header -->
 	<header role="banner">
 		<div class="container_16">
@@ -34,10 +44,10 @@
 							<div class="site-title-wrapper">
 							<h1>
                     
-						     <div class="logo-wrapper"><a href="/" class="home-link"><img src="signature.png" alt="Himabindu Kurra" class="logo" /></a></div>
+						     <div class="header" id="myHeader"><a href="/" class="home-link"><img src="signature.png" alt="Himabindu Kurra" class="logo" /></a></div>
 						     
 						</h1>
-								<h3><div>        Full Stack Developer</div></h3>
+								<h3><p>        Full Stack Developer</p></h3>
 					      </div>
 					
 					     
@@ -370,5 +380,19 @@ onload="startTime()">
 <script src="scripts/placeholder.js"></script>
 <![endif]-->
 <script src="plugins.js"></script>
+	<script>
+	window.onscroll = function() {myFunction()};
+
+	var header = document.getElementById("myHeader");
+	var sticky = header.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset > sticky) {
+	    header.classList.add("sticky");
+	  } else {
+	    header.classList.remove("sticky");
+	  }
+	}
+	</script>
 
 </body></html>
