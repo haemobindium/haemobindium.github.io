@@ -397,7 +397,9 @@ onload="startTime()">
 	  if (window.pageYOffset > sticky) {
 		 
 	    header.classList.add("sticky");
-		  document.getElementsByTagName("header").setAttribute("class", "format"); 
+		
+		  header.style.backgroundColor = "grey";
+		  header.style.color = "white";
 		  
 	  } else {
 	    header.classList.remove("sticky");
