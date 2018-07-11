@@ -395,8 +395,9 @@ onload="startTime()">
 
 	function myFunction() {
 	  if (window.pageYOffset > sticky) {
-		 document.getElementsByTagName("header").setAttribute("class", "format"); 
+		 
 	    header.classList.add("sticky");
+		  document.getElementsByTagName("header").setAttribute("class", "format"); 
 		  
 	  } else {
 	    header.classList.remove("sticky");
